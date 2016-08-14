@@ -1,3 +1,8 @@
-baseurl = "http://replace-this-with-your-hugo-site.com/"
+baseurl = "https://tthanh.github.io/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "tthanh's blog"
+theme = "hyde"
+
+[params]
+description = "dev dev dev"
+author = "tthanh"
