@@ -1,0 +1,7 @@
+#!/bin/bash
+
+hugo
+
+git subtree push --prefix public origin master
+
+git clean -df public

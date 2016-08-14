@@ -13,4 +13,4 @@ deployment:
     commands:
       - hugo
       - git subtree push --prefix public origin master
-      - git clean -uf public
+      - git clean -df public
