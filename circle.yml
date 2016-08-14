@@ -7,8 +7,12 @@ dependencies:
     - git config --global user.name "Tien Thanh"
     - git config --global user.email "tthanh.v9.16@gmail.com"
 
+test:
+  override:
+    - echo "test"
+
 deployment:
-  source:
+  publish:
     branch: source
     commands:
       - hugo
