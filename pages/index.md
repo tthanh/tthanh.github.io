@@ -3,22 +3,27 @@ layout: default
 permalink: /
 ---
 <br><br>
-Hello! My name is [Your Name], and I am a dedicated software developer based in Vietnam with 5 years of experience in the industry.
-
+Hello! My name is [Your Name], and I am a passionate Full-stack .NET Developer based in Vietnam with over 5 years of professional experience. My expertise lies in building robust and scalable web applications using a variety of technologies, including .NET (C#), ASP.NET Core, JavaScript (TypeScript, React, Vue), and SQL/NoSQL databases.
+<br><br>
+<h2>Skills</h2>
 <div class="row">
-{% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}
-{% include about/skills.html title="Other Skills" source=site.data.other-skills %}
+<!-- {% include about/skills.html title="Programming Skills" source=site.data.programming-skills %} -->
+<!-- {% include about/skills.html title="Other Skills" source=site.data.other-skills %} -->
 </div>
 
+<br><br>
+<h2>My Experience</h2>
 <div class="row">
 {% include about/timeline.html %}
 </div>
 
+<br><br>
+<h2>More about me</h2>
 
-Want to find more about me? Check out my
+Take a look at:
 
-<a href = "/projects">Projects</a>
-<a href = "/blog">Blog</a>
+<a href = "/projects">My Projects</a>
+<a href = "/blog">My Blog</a>
 
 Or reach out to me through
 
