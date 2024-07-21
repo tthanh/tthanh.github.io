@@ -1,5 +1,5 @@
 ---
-title: 4 Lessons After 11 Years in Silicon Valley
+title: 'State Management in React: Understanding useState and useReducer'
 tags: 
 style: fill
 color: success

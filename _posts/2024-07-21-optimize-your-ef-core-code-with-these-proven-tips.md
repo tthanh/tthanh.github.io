@@ -1,5 +1,5 @@
 ---
-title: Digital Minimalism
+title: Optimize Your EF Core Code with These Proven Tips
 tags: [Social Media, Minimalism, Technology]
 style: 
 color: 

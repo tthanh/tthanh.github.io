@@ -1,5 +1,5 @@
 ---
-title: Learn React.js in 5 minutes
+title: 'Achieving Cloud Agnostic Deployment: Strategies and Best Practices'
 tags: [React, JavaScript, Web Development]
 style: border
 color: primary
