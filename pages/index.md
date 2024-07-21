@@ -3,9 +3,9 @@ layout: default
 permalink: /
 ---
 <br><br>
-Hello! My name is [Your Name], and I am a passionate Full-stack .NET Developer based in Vietnam with over 5 years of professional experience. My expertise lies in building robust and scalable web applications using a variety of technologies, including .NET (C#), ASP.NET Core, JavaScript (TypeScript, React, Vue), and SQL/NoSQL databases.
+Hello! My name is Thanh.
 <br><br>
-<h2>Skills</h2>
+<!-- <h2>Skills</h2> -->
 <div class="row">
 <!-- {% include about/skills.html title="Programming Skills" source=site.data.programming-skills %} -->
 <!-- {% include about/skills.html title="Other Skills" source=site.data.other-skills %} -->
@@ -16,7 +16,6 @@ Hello! My name is [Your Name], and I am a passionate Full-stack .NET Developer b
 <div class="row">
 {% include about/timeline.html %}
 </div>
-
 <br><br>
 <h2>More about me</h2>
 
