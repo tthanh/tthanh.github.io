@@ -9,5 +9,38 @@
     border: 1px solid #dee2e6 !important;
 }
 
+.profile-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    // border: 1px solid #ccc;
+    border-radius: 10px;
+    // max-width: 900px;
+    // width: 100%;
+    margin: 0 auto;
+    // background-color: #f9f9f9;
+  }
+  .profile-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  .profile-container h5 {
+    margin: 0;
+    font-size: 1.2em;
+    // color: #333;
+  }
+
+  .timeline-date-loc {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .timeline-loc {
+    font-style: italic;
+  }
+
 @import "portfolYOU";
 

@@ -1,15 +1,17 @@
-- title: Full-stack .NET Developer, Live Payments, VN
+- title: Full-stack .NET Developer - Live Payments
   from: 2022
-  to: Present&nbsp;&nbsp;a
+  to: Present
+  location: Ho Chi Minh City, Vietnam
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
-- title: Full-stack .NET Developer, Globaltech JSC, VN
+- title: Full-stack .NET Developer - Globaltech JSC
   from: 2019
   to: 2022
+  location: Ho Chi Minh City, Vietnam
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -19,6 +21,7 @@
 - title: Student, VNUHCM - University Of Science
   from: 2017
   to: 2021
+  location: Ho Chi Minh City, Vietnam
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
