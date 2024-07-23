@@ -1,8 +1,7 @@
 ---
 title: Optimize Your EF Core Code with These Proven Tips
-tags: [Social Media, Minimalism, Technology]
-style: 
-color: 
+tags: [ C#, .NET, Entity Framework, Database ]
+color: primary
 description: Minimalism is the art of knowing how much is just enough. Digital minimalism applies this idea to our personal technology. It’s the key to living a focused life in an increasingly noisy world.
 ---
 

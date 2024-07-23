@@ -1,8 +1,7 @@
 ---
 title: Step-by-Step Guide to Migrate Legacy Windows Applications to AWS ECS
-tags: [Software Development, Clean Code]
-style: fill
-color: info
+tags: [ AWS ECS, Docker, Migration, Cloud Computing ]
+color: primary
 description: These four “clean code” tips will dramatically improve your engineering team’s productivity
 ---
 

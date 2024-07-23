@@ -3,7 +3,8 @@ layout: default
 permalink: /
 ---
 <br><br>
-Hello! My name is Thanh.
+  <!-- <img style="width:100px; height: 100px;" src="/assets/profile.jpg"/> -->
+  <p>Hello! I'm Thanh, a Full Stack .NET Developer with 5+ years of experience</p>
 <br><br>
 <!-- <h2>Skills</h2> -->
 <div class="row">

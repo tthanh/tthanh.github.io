@@ -1,8 +1,7 @@
 ---
 title: 'State Management in React: Understanding useState and useReducer'
 tags: 
-style: fill
-color: success
+color: primary
 description: On the realities of opportunity, success, reputation, and relationships in tech.
 ---
 
