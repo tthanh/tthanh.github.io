@@ -11,37 +11,37 @@ permalink: /
       <p>I specialize in building high-performance web apps and am eager to join your team to work on exciting projects.</p>
     </div>
   </div>
-<br><br>
-<!-- <h2>Skills</h2> -->
-<h2>Skills</h2>
+<h2 class="section-title">Skills</h2>
 <div class="row">
-<!-- {% include about/skills.html title="Programming Skills" source=site.data.programming-skills %} -->
-<!-- {% include about/skills.html title="Other Skills" source=site.data.other-skills %} -->
+  <div class="skills">
+        <div>Back-end: C#, .NET, Golang, Gin</div>
+        <div>Back-end: C#, .NET, Golang, Gin</div>
+        <div>Back-end: C#, .NET, Golang, Gin</div>
+        <div>Back-end: C#, .NET, Golang, Gin</div>
+      </div>
 </div>
 
-<br><br>
-<h2>Experience</h2>
+<h2 class="section-title">Experience</h2>
 <div class="row">
-<!-- {% include about/timeline.html %} -->
-<div class="col mt-4">
-  <div class="timeline-body bg-themed">
-    {% for item in site.data.timeline %}
-      <div class="timeline-item">
-        <div class="content">
-          <h2>{{ item.title }}</h2>
-          <div class="timeline-date-loc">
-            <h6 class="date">{{ item.from }} — {{ item.to }}</h6>
-            <h6 class="date timeline-loc">{{ item.location }}</h6>
+  <div class="col mt-4">
+    <div class="timeline-body bg-themed">
+      {% for item in site.data.timeline %}
+        <div class="timeline-item">
+          <div class="content">
+            <h3>{{ item.title }}</h3>
+            <div class="timeline-date-loc">
+              <h6 class="date">{{ item.from }} — {{ item.to }}</h6>
+              <h6 class="date timeline-loc">{{ item.location }}</h6>
+            </div>
+            <p>{{ item.description }}</p>
           </div>
-          <p>{{ item.description }}</p>
         </div>
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
 </div>
-</div>
 <br><br>
-<h2>More about me</h2>
+<h2 class="section-title">More about me</h2>
 
 Take a look at:
 
