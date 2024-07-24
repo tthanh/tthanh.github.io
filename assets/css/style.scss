@@ -150,15 +150,17 @@
   }
 
   .btn-projects {
-    background-color: #396ea7;
+    background-color: #38434e;
   }
   
   .btn-blog {
     background-color: #646464;
   }
 
-  .social-btn, .my-btn {
+  .social-btn:hover, .my-btn:hover {
     opacity: 0.8;
+    // background-color: #646464;
+    background-color: #f8f9fa;
   }
 
   .my-btn {
