@@ -5,7 +5,7 @@ permalink: /
   <div class="profile-container">
     <img src="/assets/profile.jpg" alt="Profile Picture">
     <div style="border-bottom: ">
-      <h5>Hi! I'm Thanh, a Full Stack .NET Developer. 👨‍💻</h5>
+      <h5>Hi! I'm Thanh, a Full-Stack .NET Developer. 👨‍💻</h5>
       <br>
       <p>I specialize in building high-performance web apps and am eager to join your team to on next exciting projects.</p>
       <div class="socials">
