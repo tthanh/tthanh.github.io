@@ -2,23 +2,66 @@
 layout: default
 permalink: /
 ---
-<!-- <br> -->
   <div class="profile-container">
     <img src="/assets/profile.jpg" alt="Profile Picture">
-    <div>
+    <div style="border-bottom: ">
       <h5>Hi! I'm Thanh, a Full Stack .NET Developer. 👨‍💻</h5>
       <br>
-      <p>I specialize in building high-performance web apps and am eager to join your team to work on exciting projects.</p>
+      <p>I specialize in building high-performance web apps and am eager to join your team to on next exciting projects.</p>
     </div>
   </div>
-<h2 class="section-title">Skills</h2>
+<!-- <h2 class="section-title">Skills</h2> -->
 <div class="row">
-  <div class="skills">
-        <div>Back-end: C#, .NET, Golang, Gin</div>
-        <div>Back-end: C#, .NET, Golang, Gin</div>
-        <div>Back-end: C#, .NET, Golang, Gin</div>
-        <div>Back-end: C#, .NET, Golang, Gin</div>
-      </div>
+  <div class="col mt-4">
+    <div class="skill-body timeline-body bg-themed">
+      <div class="timeline-item">
+          <div class="content">
+            <div class="skills-container">
+  <div class="skill">
+    <span>
+      <b>Languages: </b>C#, Go, Python, Javascript, Typescript
+    </span>
+  </div>
+  <div class="skill">
+    <span>
+      <b>Database: </b> SQL Server, PostgreSQL, MongoDB, DynamoDB, Redis
+    </span>
+  </div>
+  <div class="skill">
+    <span>
+      <b>Frameworks: </b> .NET, Gin, React, Blazor, .NET MVC
+    </span>
+  </div>
+  <div class="skill">
+    <span>
+      <b>Cloud Services: </b> AWS, VMWare Private Cloud
+    </span>
+  </div>
+  <div class="skill">
+    <span>
+      <b>Architectures: </b>Microservices, DDD, Clean Architecture, Event-Driven Architecture.
+    </span>
+  </div>
+  <div class="skill">
+    <span>
+      <b>CI/CD: </b>AWS CodePipeline, Kubernetes, GitLab CI/CD, Bitbucket Pipelines
+    </span>
+  </div>
+  <div class="skill">
+    <span>
+      <b>Methodologies: </b>Agile
+    </span>
+  </div>
+   <div class="skill">
+    <span>
+      <b>Other: </b>Docker, CloudFormation, ELK, SignalR, gRPC, GraphQL
+    </span>
+  </div>
+</div>
+          </div>
+        </div>
+    </div>
+  </div>
 </div>
 
 <h2 class="section-title">Experience</h2>
@@ -40,34 +83,8 @@ permalink: /
     </div>
   </div>
 </div>
-<br><br>
-<h2 class="section-title">More about me</h2>
-
-Take a look at:
-
-<a href = "/projects">My Projects</a>
-<a href = "/blog">My Blog</a>
-
-Or reach out to me through
-
-
-<div class="container-fluid justify-content-center">
-
-  {%- assign unfocused_color = "6c757d" -%}
-
-  {% for account in site.author %}
-
-    {%- assign service_name = account[0] -%}
-    {%- assign service_data = site.data.social-media[service_name] -%}
-    {%- if service_data -%}    
-    <a class="social mx-1"  href="{{ service_data.url }}{{ account[1] }}"
-       style="color: #{{ unfocused_color }}"
-       onMouseOver="this.style.color='#{{ service_data.color }}'"
-       onMouseOut="this.style.color='#{{ unfocused_color }}'">
-      <i class="{{ service_data.icon }} fa-1x"></i>
-    </a>
-    {%- endif -%}
-  
-  {% endfor %}
-
+<div class="more-about">
+  <h4 class="section-title">Feel free to take a look at:</h4>
+  <a href="/projects" class="btn">My Projects</a>
+  <a href="/blog" class="btn">My Blog</a>
 </div>
