@@ -89,7 +89,7 @@
   .skill {
     flex: 1 1 45%; /* Adjust the percentage to control the column width */
     // padding: 10px;
-    background-color: #f8f9fa; /* Background color for skill items */
+    // background-color: #f8f9fa; /* Background color for skill items */
     border-radius: 5px;
     // margin: 5px;
     display: flex;
@@ -112,6 +112,81 @@
 
   .more-about > a {
     min-width: 150px;
+  }
+
+  .socials {
+    display: flex;
+  }
+
+  .more-about-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .social-btn {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-email {
+    background-color: #007bff;
+  }
+  
+  .btn-linkedin {
+    background-color: #0a66c2;
+  }
+  
+  .btn-github {
+    background-color: #333;
+  }
+
+  .btn-projects {
+    background-color: #396ea7;
+  }
+  
+  .btn-blog {
+    background-color: #646464;
+  }
+
+  .social-btn, .my-btn {
+    opacity: 0.8;
+  }
+
+  .my-btn {
+    // display: inline-block;
+    // display: ;
+    // width: 40px;
+    height: 30px;
+    // line-height: 40px;
+    margin-right: 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    // padding: 10px;
+    transition: background-color 0.3s ease;
+    text-decoration: none !important;
+    min-width: 140px;
+  }
+
+  .my-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .my-btn > i {
+    // font-size: 20px;
+    margin-right: 0.5rem;
+
   }
 @import "portfolYOU";
 

@@ -8,51 +8,57 @@ permalink: /
       <h5>Hi! I'm Thanh, a Full Stack .NET Developer. 👨‍💻</h5>
       <br>
       <p>I specialize in building high-performance web apps and am eager to join your team to on next exciting projects.</p>
+      <div class="socials">
+        <a href="/projects" class="social-btn btn-email"><i class="fas fa-envelope"></i></a>
+        <a href="/projects" class="social-btn btn-linkedin"><i class="fab fa-linkedin-in"></i></a>
+        <a href="/projects" class="social-btn btn-github"><i class="fab fa-github"></i></a>
+        <a href="/projects" class="my-btn btn-projects"><i class="fas fa-pencil-ruler"></i>My Projects</a>
+        <a href="/projects" class="my-btn btn-blog"><i class="fas fa-pen"></i>My Blog</a>
+      </div>
     </div>
   </div>
-<!-- <h2 class="section-title">Skills</h2> -->
 <div class="row">
   <div class="col mt-4">
     <div class="skill-body timeline-body bg-themed">
       <div class="timeline-item">
           <div class="content">
             <div class="skills-container">
-  <div class="skill">
+  <div class="skill bg-themed">
     <span>
       <b>Languages: </b>C#, Go, Python, Javascript, Typescript
     </span>
   </div>
-  <div class="skill">
+  <div class="skill bg-themed">
     <span>
       <b>Database: </b> SQL Server, PostgreSQL, MongoDB, DynamoDB, Redis
     </span>
   </div>
-  <div class="skill">
+  <div class="skill bg-themed">
     <span>
       <b>Frameworks: </b> .NET, Gin, React, Blazor, .NET MVC
     </span>
   </div>
-  <div class="skill">
+  <div class="skill bg-themed">
     <span>
       <b>Cloud Services: </b> AWS, VMWare Private Cloud
     </span>
   </div>
-  <div class="skill">
+  <div class="skill bg-themed">
     <span>
       <b>Architectures: </b>Microservices, DDD, Clean Architecture, Event-Driven Architecture.
     </span>
   </div>
-  <div class="skill">
+  <div class="skill bg-themed">
     <span>
       <b>CI/CD: </b>AWS CodePipeline, Kubernetes, GitLab CI/CD, Bitbucket Pipelines
     </span>
   </div>
-  <div class="skill">
+  <div class="skill bg-themed">
     <span>
       <b>Methodologies: </b>Agile
     </span>
   </div>
-   <div class="skill">
+   <div class="skill bg-themed">
     <span>
       <b>Other: </b>Docker, CloudFormation, ELK, SignalR, gRPC, GraphQL
     </span>
@@ -85,6 +91,8 @@ permalink: /
 </div>
 <div class="more-about">
   <h4 class="section-title">Feel free to take a look at:</h4>
-  <a href="/projects" class="btn">My Projects</a>
-  <a href="/blog" class="btn">My Blog</a>
+  <div class="more-about-links">
+  <a href="/projects" class="my-btn btn-projects"><i class="fas fa-pencil-ruler"></i>My Projects</a>
+  <a href="/projects" class="my-btn btn-blog"><i class="fas fa-pen"></i>My Blog</a>
+  </div>
 </div>
