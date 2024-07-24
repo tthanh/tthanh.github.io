@@ -9,9 +9,9 @@ permalink: /
       <br>
       <p>I specialize in building high-performance web apps and am eager to join your team to on next exciting projects.</p>
       <div class="socials">
-        <a href="tranthuanthanh.dl@gmail.com" class="social-btn btn-email"><i class="fas fa-envelope"></i></a>
-        <a href="https://www.linkedin.com/in/tranthuanthanh" class="social-btn btn-linkedin"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.github.com/tthanh" class="social-btn btn-github"><i class="fab fa-github"></i></a>
+        <a href="mailto:tranthuanthanh.dl@gmail.com" class="social-btn btn-email"><i class="fas fa-envelope"></i></a>
+        <a target="_blank" href="https://www.linkedin.com/in/tranthuanthanh" class="social-btn btn-linkedin"><i class="fab fa-linkedin-in"></i></a>
+        <a target="_blank" href="https://www.github.com/tthanh" class="social-btn btn-github"><i class="fab fa-github"></i></a>
         <a href="/projects" class="my-btn btn-projects"><i class="fas fa-pencil-ruler"></i>My Projects</a>
         <a href="/projects" class="my-btn btn-blog"><i class="fas fa-pen"></i>My Blog</a>
       </div>
