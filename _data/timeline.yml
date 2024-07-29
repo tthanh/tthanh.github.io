@@ -2,28 +2,61 @@
   from: 2022
   to: Present
   location: Ho Chi Minh City, Vietnam
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  description: >
+    - Collaborated daily with Australian stakeholders in a Scrum team, excelling in an English-speaking environment.<br />
+    - Designed and implemented event-driven solutions using .NET, SQL Server, Redis, Docker, AWS Lambda, SQS, SNS, Kinesis, and S3.<br />
+    - Developed secure, compliant processors for Mastercard and Visa reports with .NET, Docker and AWS ECS.<br />
+    - Established CI/CD pipelines with AWS CodePipeline, achieving unit test coverage with SonarQube integration.<br />
+    - Implemented real-time transaction processors and APIs using .NET, AWS Kinesis Stream, PostgreSQL, and MSSQL.
+  skills:
+    - .NET
+    - AWS
+    - Docker
+    - Event-driven Architecture
+    - SQL Server
+    - PostgreSQL
+    - DynamoDB
+    - AWS ECS
+    - Unit Testing
+    - CI/CD
+    - Scrum
+    - Agile
+    - CloudFormation
+    - IaC
 
-- title: Full-stack .NET Developer - Globaltech JSC
-  from: 2019
-  to: 2022
-  location: Ho Chi Minh City, Vietnam
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
 - title: Software Developer - InliveWith
   from: 2020
   to: 2021
   location: Freelancer
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  description: >
+    - Built a chat app for French clients, handling 5000+ concurrent users with .NET MVC, SignalR, HAProxy, Redis.<br />
+    - Performed load testing and deployed the app to the production server.<br />
+  skills:
+    - .NET
+    - SignalR
+    - Redis
+    - HAProxy
+    - Load Testing
+    - Real-time
+
+- title: Full-stack .NET Developer - Globaltech JSC
+  from: 2019
+  to: 2022
+  location: Ho Chi Minh City, Vietnam
+  description: >
+    - Built microservices with .NET, MongoDB, and VMWare vSphere SDK for an enterprise network simulation system.<br />
+    - Implemented gRPC for low-latency communication and Kafka for event-driven messaging in microservices.<br />
+    - Designed and implemented a solution using the ELK Stack for event collection, visualization, and alerting.<br />
+    - Developed UI features and RESTful APIs with .NET 3.1 MVC, facilitating client access through an API Gateway.<br />
+  skills:
+    - .NET
+    - Microservices
+    - Kafka
+    - MongoDB
+    - gRPC
+    - ELK Stack
+    - Unit Testing
+    - Gitlab CI
+    - Scrum
+    - Agile
