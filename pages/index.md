@@ -4,8 +4,7 @@ permalink: /
 ---
   <div class="profile-container">
     <img src="/assets/profile.jpg" alt="Profile Picture">
-    <div style="border-bottom: ">
-      <!-- <h5>Hi! I'm Thanh, a Full-Stack .NET Developer. 👨‍💻</h5> -->
+    <div>
       <p>Hi! I specialize in building high-performance web apps and am eager to join your team on next exciting projects.</p>
       <div class="socials">
         <a href="mailto:tranthuanthanh.dl@gmail.com" class="social-btn btn-email"><i class="fas fa-envelope"></i></a>

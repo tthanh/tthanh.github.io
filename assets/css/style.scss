@@ -18,6 +18,8 @@
     // max-width: 900px;
     // width: 100%;
     margin: 0 auto;
+    max-width: 100vw;
+    flex-wrap: wrap;
   }
   .profile-container img {
     width: 150px;
@@ -117,6 +119,7 @@
 
   .socials {
     display: flex;
+    flex-wrap: wrap;
   }
 
   .more-about-links {
