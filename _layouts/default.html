@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:title" content="{{ site.title }}">
+    <meta property="og:description" content="{{ site.description }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="twitter:title" content="{{ site.title }}">
+    <meta property="twitter:description" content="{{ site.description }}">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}">
+    <link rel="icon" type="image/x-icon"
+        href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocAFmaHABZmhwAWZocADi8PAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==">
+    <meta name="theme-color" content="#166787">
+
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="site-nav">
+            <div class="container">
+                <a class="site-title" href="{{ '/' | relative_url }}">
+                    Thanh Thuan Tran
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-content" aria-label="Content">
+        {{ content }}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div style="text-align: center; padding: 40px 0; color: #666; border-top: 1px solid #333;">
+                <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title | split: ' | ' | first }}. Built with Jekyll.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for interactions -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Smart navbar - hidden at top, show when scrolling down
+        const navbar = document.querySelector('.site-header');
+        const scrollThreshold = 50; // Show navbar after 50px scroll
+
+        window.addEventListener('scroll', function () {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            // If we're at the very top, hide navbar completely
+            if (scrollTop <= scrollThreshold) {
+                navbar.classList.remove('visible');
+                navbar.classList.add('hidden');
+            }
+            // If we've scrolled past the threshold, show navbar
+            else {
+                navbar.classList.add('visible');
+                navbar.classList.remove('hidden');
+            }
+        }, false);
+
+        // Hide navbar initially when at top
+        window.addEventListener('load', function () {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop <= scrollThreshold) {
+                navbar.classList.add('hidden');
+                navbar.classList.remove('visible');
+            } else {
+                navbar.classList.add('visible');
+                navbar.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+
+</html>
