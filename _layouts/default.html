@@ -46,6 +46,10 @@
                 <a class="site-title" href="{{ '/' | relative_url }}">
                     Thanh Thuan Tran
                 </a>
+                <div class="nav-links">
+                    <a href="{{ '/' | relative_url }}" class="nav-link">Home</a>
+                    <a href="{{ '/blogs/' | relative_url }}" class="nav-link">Blogs</a>
+                </div>
             </div>
         </nav>
     </header>
@@ -74,35 +78,42 @@
             });
         });
 
-        // Smart navbar - hidden at top, show when scrolling down
+        // Smart navbar - subtle at top, prominent when scrolling
         const navbar = document.querySelector('.site-header');
-        const scrollThreshold = 50; // Show navbar after 50px scroll
+        const scrollThreshold = 50; // Change navbar style after 50px scroll
 
         window.addEventListener('scroll', function () {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-            // If we're at the very top, hide navbar completely
+            // If we're at the very top, show subtle navbar
             if (scrollTop <= scrollThreshold) {
-                navbar.classList.remove('visible');
-                navbar.classList.add('hidden');
+                navbar.classList.remove('scrolled');
+                navbar.classList.add('at-top');
             }
-            // If we've scrolled past the threshold, show navbar
+            // If we've scrolled past the threshold, show prominent navbar
             else {
-                navbar.classList.add('visible');
-                navbar.classList.remove('hidden');
+                navbar.classList.add('scrolled');
+                navbar.classList.remove('at-top');
             }
         }, false);
 
-        // Hide navbar initially when at top
+        // Initialize navbar state on load
         window.addEventListener('load', function () {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            // Set initial state without transitions
             if (scrollTop <= scrollThreshold) {
-                navbar.classList.add('hidden');
-                navbar.classList.remove('visible');
+                navbar.classList.add('at-top');
+                navbar.classList.remove('scrolled');
             } else {
-                navbar.classList.add('visible');
-                navbar.classList.remove('hidden');
+                navbar.classList.add('scrolled');
+                navbar.classList.remove('at-top');
             }
+
+            // Enable transitions after a small delay to prevent flickering
+            setTimeout(() => {
+                navbar.classList.add('transitions-enabled');
+            }, 100);
         });
     </script>
 </body>
