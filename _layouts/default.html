@@ -37,6 +37,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Fluent 2 Typography - Segoe UI Variable -->
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -47,8 +50,8 @@
                     Thanh Thuan Tran
                 </a>
                 <div class="nav-links">
-                    <a href="{{ '/' | relative_url }}" class="nav-link">Home</a>
-                    <a href="{{ '/blogs/' | relative_url }}" class="nav-link">Blogs</a>
+                    <a href="{{ '/' | relative_url }}" class="nav-link" data-nav="home">Home</a>
+                    <a href="{{ '/blogs/' | relative_url }}" class="nav-link" data-nav="blogs">Blogs</a>
                     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme">
                         <i class="fas fa-sun theme-icon-light"></i>
                         <i class="fas fa-moon theme-icon-dark"></i>
@@ -145,6 +148,53 @@
             html.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             updateThemeToggle();
+        });
+
+        // Modern Navigation Active State
+        function setActiveNavigation() {
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('.nav-link[data-nav]');
+            
+            // Remove active class from all nav links
+            navLinks.forEach(link => link.classList.remove('active'));
+            
+            // Determine active nav based on current path
+            if (currentPath === '/' || currentPath === '/index.html' || currentPath === '') {
+                const homeLink = document.querySelector('[data-nav="home"]');
+                if (homeLink) homeLink.classList.add('active');
+            } else if (currentPath.includes('/blogs') || currentPath.startsWith('/blogs')) {
+                const blogsLink = document.querySelector('[data-nav="blogs"]');
+                if (blogsLink) blogsLink.classList.add('active');
+            }
+        }
+
+        // Add click handlers to navigation links for immediate feedback
+        function setupNavigationHandlers() {
+            const navLinks = document.querySelectorAll('.nav-link[data-nav]');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Remove active from all links
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    // Add active to clicked link
+                    this.classList.add('active');
+                });
+            });
+        }
+
+        // Set active navigation on page load
+        window.addEventListener('load', function() {
+            setActiveNavigation();
+            setupNavigationHandlers();
+        });
+        
+        // Update active navigation when navigating (for SPA-like behavior)
+        window.addEventListener('popstate', setActiveNavigation);
+        
+        // Also update on page visibility change (helps with back/forward navigation)
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden) {
+                setTimeout(setActiveNavigation, 100);
+            }
         });
     </script>
 </body>
