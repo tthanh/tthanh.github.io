@@ -37,9 +37,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    
+
     <!-- Fluent 2 Typography - Segoe UI Variable -->
-    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Theme Initialization Script -->
+    <script>
+        (function () {
+            const html = document.documentElement;
+            const currentTheme = localStorage.getItem('theme') || 'dark';
+            html.setAttribute('data-theme', currentTheme);
+        })();
+    </script>
 </head>
 
 <body>
@@ -127,10 +136,6 @@
         const themeToggle = document.getElementById('theme-toggle');
         const html = document.documentElement;
 
-        // Check for saved theme preference or default to 'dark'
-        const currentTheme = localStorage.getItem('theme') || 'dark';
-        html.setAttribute('data-theme', currentTheme);
-
         // Update toggle button state
         function updateThemeToggle() {
             const isDark = html.getAttribute('data-theme') === 'dark';
@@ -154,10 +159,10 @@
         function setActiveNavigation() {
             const currentPath = window.location.pathname;
             const navLinks = document.querySelectorAll('.nav-link[data-nav]');
-            
+
             // Remove active class from all nav links
             navLinks.forEach(link => link.classList.remove('active'));
-            
+
             // Determine active nav based on current path
             if (currentPath === '/' || currentPath === '/index.html' || currentPath === '') {
                 const homeLink = document.querySelector('[data-nav="home"]');
@@ -172,7 +177,7 @@
         function setupNavigationHandlers() {
             const navLinks = document.querySelectorAll('.nav-link[data-nav]');
             navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
+                link.addEventListener('click', function (e) {
                     // Remove active from all links
                     navLinks.forEach(l => l.classList.remove('active'));
                     // Add active to clicked link
@@ -182,16 +187,16 @@
         }
 
         // Set active navigation on page load
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             setActiveNavigation();
             setupNavigationHandlers();
         });
-        
+
         // Update active navigation when navigating (for SPA-like behavior)
         window.addEventListener('popstate', setActiveNavigation);
-        
+
         // Also update on page visibility change (helps with back/forward navigation)
-        document.addEventListener('visibilitychange', function() {
+        document.addEventListener('visibilitychange', function () {
             if (!document.hidden) {
                 setTimeout(setActiveNavigation, 100);
             }
