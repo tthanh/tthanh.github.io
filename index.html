@@ -21,11 +21,11 @@ layout: default
 
         <h1 style="letter-spacing: -2px; font-size: clamp(2.5rem, 8vw, 4.5rem); margin-bottom: 0.5rem;">👋 Hey, I'm
             <span
-                style="background: linear-gradient(to right, var(--primary-color), var(--accent-vibrant)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Thanh</span>
+                style="background: linear-gradient(to right, var(--primary-color), var(--accent-vibrant)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Thanh</span>
         </h1>
         <p class="subtitle"
             style="letter-spacing: 0.2em; font-size: 0.85rem; color: var(--primary-color); font-weight: 700; margin-bottom: 2rem;">
-            BUILDING THE FUTURE OF BACKEND</p>
+            BACKEND ARCHITECTURE & ENGINEERING</p>
         <div class="intro" style="max-width: 700px; margin: 0 auto;">
             <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-secondary);">I architect critical backend
                 systems with <strong>.NET</strong> and <strong>Python</strong>.
@@ -137,28 +137,31 @@ layout: default
     </section>
 
     <section class="section">
-        <h2>What I'm learning</h2>
-        <p class="section-intro">I am currently focusing on building expertise in <strong>Software
-                Architecture</strong>, <strong>Distributed Systems</strong>, and building efficient <strong>AI
-                Agents</strong>. I document my journey through periodic writing and hands-on projects.</p>
+        <h2>Deep Dives</h2>
+        <p class="section-intro">Beyond development, I enjoy sharing technical insights and documenting my experiments
+            in system architecture and AI Agents.</p>
         <div class="learning-grid">
-            <a href="{{ '/blogs/' | relative_url }}" class="learning-card" style="text-decoration: none;">
+            <a href="{{ '/blogs/' | relative_url }}" class="learning-card glass-panel glow-on-hover"
+                style="text-decoration: none; border-radius: var(--border-radius-large);">
                 <div class="learning-icon">
-                    <i class="fas fa-pen-nib"></i>
+                    <i class="fas fa-book-open"
+                        style="background: linear-gradient(to bottom, var(--primary-color), var(--accent-vibrant)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;"></i>
                 </div>
                 <div class="learning-content">
-                    <h3>Blogs</h3>
+                    <h3>Engineering Blog</h3>
                     <p>Writings about system design, .NET depth, and architectural patterns.</p>
                 </div>
             </a>
 
-            <a href="{{ '/projects/' | relative_url }}" class="learning-card" style="text-decoration: none;">
+            <a href="{{ '/projects/' | relative_url }}" class="learning-card glass-panel glow-on-hover"
+                style="text-decoration: none; border-radius: var(--border-radius-large);">
                 <div class="learning-icon">
-                    <i class="fas fa-rocket"></i>
+                    <i class="fas fa-code-branch"
+                        style="background: linear-gradient(to bottom, var(--primary-color), var(--accent-vibrant)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;"></i>
                 </div>
                 <div class="learning-content">
-                    <h3>Personal Projects</h3>
-                    <p>Open-source tools and experiments built with .NET, Python, and Cloud.</p>
+                    <h3>Lab Projects</h3>
+                    <p>Open source contributions, architectural prototypes, and AI experiments.</p>
                 </div>
             </a>
         </div>
