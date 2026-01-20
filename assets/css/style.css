@@ -51,12 +51,30 @@
     --border-radius-small: 4px;
     --border-radius-medium: 8px;
     --border-radius-large: 12px;
+    --border-radius-xl: 20px;
     --border-radius-circular: 50%;
 
-    /* Stroke Width */
-    --stroke-width-thin: 1px;
-    --stroke-width-thick: 2px;
-    --stroke-width-thicker: 3px;
+    /* Premium Effects */
+    --glass-blur: 12px;
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glow-primary: rgba(0, 120, 212, 0.3);
+    --glow-accent: rgba(114, 50, 242, 0.3);
+}
+
+/* Glassmorphism Utility */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Glow Effect */
+.glow-on-hover:hover {
+    box-shadow: 0 0 20px var(--glow-primary);
+    border-color: var(--primary-color);
 }
 
 /* Fluent 2 Dark Theme */
@@ -100,6 +118,10 @@ html[data-theme="dark"] {
     --header-bg-transparent: rgba(28, 28, 28, 0.6);
     --header-bg-solid: rgba(45, 45, 48, 0.95);
     --nav-text-alpha: rgba(255, 255, 255, 0.6);
+
+    /* Glass Overrides */
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.06);
 }
 
 /* Fluent 2 Light Theme */
@@ -143,6 +165,10 @@ html[data-theme="light"] {
     --header-bg-transparent: rgba(249, 249, 249, 0.92);
     --header-bg-solid: rgba(249, 249, 249, 0.98);
     --nav-text-alpha: rgba(29, 29, 29, 0.8);
+
+    /* Glass Overrides */
+    --glass-bg: rgba(0, 0, 0, 0.02);
+    --glass-border: rgba(0, 0, 0, 0.08);
 }
 
 /* Reset and Base Styles */
@@ -639,6 +665,29 @@ html[data-theme="dark"] .site-header.scrolled .nav-link.active {
     background-color: var(--primary-color);
     margin: var(--spacing-l) auto 0;
     border-radius: var(--border-radius-small);
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto var(--spacing-xxxxl);
+    color: var(--text-secondary);
+    font-size: var(--font-size-body-large);
+    line-height: var(--line-height-body-large);
+}
+
+.inline-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    border-bottom: 2px solid var(--primary-alpha);
+    transition: all 0.2s ease;
+}
+
+.inline-link:hover {
+    color: var(--primary-hover);
+    border-bottom-color: var(--primary-color);
+    background-color: var(--primary-alpha);
 }
 
 /* Bento-style Skills Section */

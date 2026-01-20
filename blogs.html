@@ -9,45 +9,19 @@ title: Blogs - Thanh Thuan Tran
         <h1>📝 My Blogs</h1>
 
         <div class="blog-grid">
+            {% for post in site.posts %}
             <article class="blog-card">
                 <div class="blog-meta">
-                    <span class="blog-date">[DATE_PLACEHOLDER]</span>
-                    <span class="blog-category">System Design</span>
+                    <span class="blog-date">{{ post.date | date: "%B %d, %Y" }}</span>
+                    <span class="blog-category">{{ post.categories | first }}</span>
                 </div>
-                <h2><a href="[BLOG_POST_1_URL]">[Blog Post Title 1]</a></h2>
-                <p>[Brief excerpt of your first blog post about backend engineering concepts...]</p>
-                <a href="[BLOG_POST_1_URL]" class="read-more">Read More →</a>
+                <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+                <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 30 }}</p>
+                <a href="{{ post.url | relative_url }}" class="read-more">Read More →</a>
             </article>
-
-            <article class="blog-card">
-                <div class="blog-meta">
-                    <span class="blog-date">[DATE_PLACEHOLDER]</span>
-                    <span class="blog-category">API Design</span>
-                </div>
-                <h2><a href="[BLOG_POST_2_URL]">[Blog Post Title 2]</a></h2>
-                <p>[Brief excerpt of your second blog post about API development and best practices...]</p>
-                <a href="[BLOG_POST_2_URL]" class="read-more">Read More →</a>
-            </article>
-
-            <article class="blog-card">
-                <div class="blog-meta">
-                    <span class="blog-date">[DATE_PLACEHOLDER]</span>
-                    <span class="blog-category">Cloud & AWS</span>
-                </div>
-                <h2><a href="[BLOG_POST_3_URL]">[Blog Post Title 3]</a></h2>
-                <p>[Brief excerpt of your third blog post about cloud solutions and AWS architecture...]</p>
-                <a href="[BLOG_POST_3_URL]" class="read-more">Read More →</a>
-            </article>
-
-            <article class="blog-card">
-                <div class="blog-meta">
-                    <span class="blog-date">[DATE_PLACEHOLDER]</span>
-                    <span class="blog-category">.NET</span>
-                </div>
-                <h2><a href="[BLOG_POST_4_URL]">[Blog Post Title 4]</a></h2>
-                <p>[Brief excerpt of your fourth blog post about .NET development and performance optimization...]</p>
-                <a href="[BLOG_POST_4_URL]" class="read-more">Read More →</a>
-            </article>
+            {% else %}
+            <p>No blog posts found yet. Check back soon!</p>
+            {% endfor %}
         </div>
 
         <div class="blog-cta">

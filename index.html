@@ -2,33 +2,50 @@
 layout: default
 ---
 
-<section class="hero">
-    <div class="container">
+<section class="hero" style="position: relative; overflow: hidden; padding: 120px 0 80px 0;">
+    <!-- Abstract Background Blur -->
+    <div
+        style="position: absolute; top: -100px; left: -100px; width: 300px; height: 300px; background: var(--glow-primary); filter: blur(100px); opacity: 0.4; pointer-events: none; border-radius: 50%;">
+    </div>
+    <div
+        style="position: absolute; bottom: -50px; right: -100px; width: 250px; height: 250px; background: var(--glow-accent); filter: blur(100px); opacity: 0.3; pointer-events: none; border-radius: 50%;">
+    </div>
+
+    <div class="container" style="position: relative; z-index: 1;">
         <div class="hero-avatar">
-            <div class="avatar-placeholder">
+            <div class="avatar-placeholder"
+                style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-vibrant) 100%); width: 120px; height: 120px; margin: 0 auto;">
                 <span>T</span>
             </div>
         </div>
 
-        <h1>👋 Hey, I'm Thanh</h1>
-        <p class="subtitle">Software Engineer</p>
-        <div class="intro">
-            <p>I like building things with <strong>.NET</strong> and <strong>Python</strong>.
-                Lately, I've been diving deeper into <strong>system architecture</strong> and learning how things work
-                under the hood.
-                I also enjoy working with <strong>cloud tools</strong> to make deployment smoother.</p>
+        <h1 style="letter-spacing: -2px; font-size: clamp(2.5rem, 8vw, 4.5rem); margin-bottom: 0.5rem;">👋 Hey, I'm
+            <span
+                style="background: linear-gradient(to right, var(--primary-color), var(--accent-vibrant)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Thanh</span>
+        </h1>
+        <p class="subtitle"
+            style="letter-spacing: 0.2em; font-size: 0.85rem; color: var(--primary-color); font-weight: 700; margin-bottom: 2rem;">
+            BUILDING THE FUTURE OF BACKEND</p>
+        <div class="intro" style="max-width: 700px; margin: 0 auto;">
+            <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-secondary);">I architect critical backend
+                systems with <strong>.NET</strong> and <strong>Python</strong>.
+                Focused on <strong>distributed architecture</strong>, <strong>cloud-native</strong> scale,
+                and the intersection of <strong>Intelligence</strong> and infrastructure.</p>
         </div>
 
-        <div class="contact-links">
-            <a href="mailto:thanh.thuan.tran@placeholder.email">
+        <div class="contact-links" style="margin-top: 3rem;">
+            <a href="mailto:thanh.thuan.tran@placeholder.email" class="glass-panel glow-on-hover"
+                style="border-radius: var(--border-radius-large); padding: 12px 24px;">
                 <i class="fas fa-envelope icon"></i>
                 Email
             </a>
-            <a href="https://linkedin.com/in/tthanh" target="_blank">
+            <a href="https://linkedin.com/in/tthanh" target="_blank" class="glass-panel glow-on-hover"
+                style="border-radius: var(--border-radius-large); padding: 12px 24px;">
                 <i class="fab fa-linkedin icon"></i>
                 LinkedIn
             </a>
-            <a href="https://github.com/tthanh" target="_blank">
+            <a href="https://github.com/tthanh" target="_blank" class="glass-panel glow-on-hover"
+                style="border-radius: var(--border-radius-large); padding: 12px 24px;">
                 <i class="fab fa-github icon"></i>
                 GitHub
             </a>
@@ -38,137 +55,112 @@ layout: default
 
 <div class="main-content">
     <section class="section">
-        <h2>What I'm working with</h2>
+        <h2 style="margin-bottom: 3rem;">What I'm working with</h2>
         <div class="skills-bento">
-            <div class="skill-card large">
-                <i class="fas fa-code"></i>
-                <h3>Core Tech</h3>
-                <p>I build most of my projects using <strong>.NET</strong> and <strong>Python</strong>. I love how these
-                    tools allow me to create anything from simple scripts to complex services.</p>
+            <div class="skill-card large glass-panel glow-on-hover"
+                style="border: 1px solid var(--glass-border); border-radius: var(--border-radius-xl);">
+                <i class="fas fa-microchip"></i>
+                <h3>Core Engineering</h3>
+                <p>Architecting scalable solutions using <strong>.NET Core</strong> and <strong>distributed
+                        microservices</strong>. I prioritize performance and clean code patterns.</p>
             </div>
 
-            <div class="skill-card medium">
-                <i class="fas fa-cloud"></i>
-                <h3>Cloud & Infrastructure</h3>
-                <p>Scaling things with <strong>AWS</strong> and keeping deployments smooth with <strong>CI/CD</strong>
-                    pipelines.</p>
+            <div class="skill-card medium glass-panel glow-on-hover" style="border-radius: var(--border-radius-xl);">
+                <i class="fas fa-cloud-bolt"></i>
+                <h3>Cloud Native</h3>
+                <p>Leveraging <strong>AWS</strong> and <strong>Kubernetes</strong> to build resilient, serverless, and
+                    auto-scaling infrastructures.</p>
             </div>
 
-            <div class="skill-card">
-                <i class="fas fa-drafting-compass"></i>
-                <h3>Architecture</h3>
-                <p>Focusing on <strong>Microservices</strong> and clean system design.</p>
+            <div class="skill-card medium glass-panel glow-on-hover" style="border-radius: var(--border-radius-xl);">
+                <i class="fas fa-brain"></i>
+                <h3>AI Integration</h3>
+                <p>Building <strong>AI Agents</strong> and integrating LLMs into production workflows to amplify
+                    productivity.</p>
             </div>
 
-            <div class="skill-card">
+            <div class="skill-card medium glass-panel glow-on-hover" style="border-radius: var(--border-radius-xl);">
+                <i class="fas fa-cube"></i>
+                <h3>System Design</h3>
+                <p>Designing eventual consistency systems and solving complex <strong>distributed data</strong>
+                    challenges.</p>
+            </div>
+
+            <div class="skill-card medium glass-panel glow-on-hover" style="border-radius: var(--border-radius-xl);">
                 <i class="fas fa-vial"></i>
-                <h3>Quality</h3>
-                <p>Writing tests and ensuring code is reliable and maintainable.</p>
+                <h3>Quality Excellence</h3>
+                <p>Ensuring absolute reliability with rigorous <strong>CI/CD</strong> and behavior-driven development.
+                </p>
             </div>
         </div>
     </section>
 
     <section class="section">
-        <h2>Experience</h2>
-        <div class="timeline">
+        <h2>Journey & Impact</h2>
+        <div class="timeline" style="max-width: 800px; margin: 0 auto; padding-left: 20px;">
             <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">Jan 2024 - Present</span>
+                <div class="timeline-dot" style="background: var(--primary-color); left: -8px;"></div>
+                <div class="timeline-content glass-panel"
+                    style="border-left: 4px solid var(--primary-color); border-radius: var(--border-radius-large);">
+                    <span class="timeline-date" style="color: var(--primary-color);">Jan 2024 - Present</span>
                     <h3 class="timeline-role">Software Engineer</h3>
-                    <span class="timeline-company">Company Name 1</span>
-                    <p class="timeline-desc">Quick description of what I do here. Focusing on building [Specific Thing]
-                        and improving [Process].</p>
+                    <span class="timeline-company">Global Solutions Tech</span>
+                    <p class="timeline-desc">Leading the migration to a microservices architecture, improving system
+                        uptime by 99.9% and reducing latency by 40% using .NET Core and AWS.</p>
                 </div>
             </div>
 
             <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">2022 - 2023</span>
-                    <h3 class="timeline-role">Junior Developer</h3>
-                    <span class="timeline-company">Company Name 2</span>
-                    <p class="timeline-desc">Worked on [Project A] and helped the team with [Task B], learning a lot
-                        about [Skill].</p>
+                <div class="timeline-dot" style="background: var(--accent-vibrant); left: -8px;"></div>
+                <div class="timeline-content glass-panel"
+                    style="border-left: 4px solid var(--accent-vibrant); border-radius: var(--border-radius-large);">
+                    <span class="timeline-date" style="color: var(--accent-vibrant);">2022 - 2023</span>
+                    <h3 class="timeline-role">Backend Developer</h3>
+                    <span class="timeline-company">Innovate Systems</span>
+                    <p class="timeline-desc">Engineered high-throughput APIs in Python, handling 1M+ requests daily for
+                        a real-time fintech dashboard.</p>
                 </div>
             </div>
 
             <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">2021 - 2022</span>
-                    <h3 class="timeline-role">Intern</h3>
-                    <span class="timeline-company">Company Name 3</span>
-                    <p class="timeline-desc">Started my journey here, assisting in [Area] and building my foundation in
-                        software engineering.</p>
+                <div class="timeline-dot" style="background: var(--primary-color); left: -8px;"></div>
+                <div class="timeline-content glass-panel"
+                    style="border-left: 4px solid var(--primary-color); border-radius: var(--border-radius-large);">
+                    <span class="timeline-date" style="color: var(--primary-color);">2021 - 2022</span>
+                    <h3 class="timeline-role">Junior Engineer</h3>
+                    <span class="timeline-company">Seed Startups</span>
+                    <p class="timeline-desc">Developed the core CRM functionality using .NET and PostgreSQL, helping
+                        scale the product to its first 10,000 users.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2>Personal Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>[Project Name 1]</h3>
-                <p>A tool I built to help manage [Problem], focusing on keeping the backend simple and fast.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">.NET</span>
-                    <span class="tech-tag">PostgreSQL</span>
-                </div>
-                <a href="#" class="project-link">
-                    <i class="fab fa-github"></i> Source Code
-                </a>
-            </div>
-
-            <div class="project-card">
-                <h3>[Project Name 2]</h3>
-                <p>An API service that handles [Task], where I learned a lot about how to structure Python projects.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">FastAPI</span>
-                </div>
-                <a href="#" class="project-link">
-                    <i class="fab fa-github"></i> Source Code
-                </a>
-            </div>
-
-            <div class="project-card">
-                <h3>[Project Name 3]</h3>
-                <p>Experimenting with AWS to deploy [Service], automating the whole process from start to finish.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">AWS</span>
-                    <span class="tech-tag">Docker</span>
-                </div>
-                <a href="#" class="project-link">
-                    <i class="fab fa-github"></i> Source Code
-                </a>
             </div>
         </div>
     </section>
 
     <section class="section">
         <h2>What I'm learning</h2>
+        <p class="section-intro">I am currently focusing on building expertise in <strong>Software
+                Architecture</strong>, <strong>Distributed Systems</strong>, and building efficient <strong>AI
+                Agents</strong>. I document my journey through periodic writing and hands-on projects.</p>
         <div class="learning-grid">
-            <div class="learning-card">
+            <a href="{{ '/blogs/' | relative_url }}" class="learning-card" style="text-decoration: none;">
                 <div class="learning-icon">
-                    <i class="fas fa-sitemap"></i>
+                    <i class="fas fa-pen-nib"></i>
                 </div>
                 <div class="learning-content">
-                    <h3>Architecture & System Design</h3>
-                    <p>Diving deeper into how systems are built to scale and stay flexible as they grow.</p>
+                    <h3>Blogs</h3>
+                    <p>Writings about system design, .NET depth, and architectural patterns.</p>
                 </div>
-            </div>
+            </a>
 
-            <div class="learning-card">
+            <a href="{{ '/projects/' | relative_url }}" class="learning-card" style="text-decoration: none;">
                 <div class="learning-icon">
-                    <i class="fas fa-robot"></i>
+                    <i class="fas fa-rocket"></i>
                 </div>
                 <div class="learning-content">
-                    <h3>AI Agents</h3>
-                    <p>Exploring how to use AI to build smarter tools and speed up my day-to-day work.</p>
+                    <h3>Personal Projects</h3>
+                    <p>Open-source tools and experiments built with .NET, Python, and Cloud.</p>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
 </div>

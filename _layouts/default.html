@@ -61,6 +61,7 @@
                 <div class="nav-links">
                     <a href="{{ '/' | relative_url }}" class="nav-link" data-nav="home">Home</a>
                     <a href="{{ '/blogs/' | relative_url }}" class="nav-link" data-nav="blogs">Blogs</a>
+                    <a href="{{ '/projects/' | relative_url }}" class="nav-link" data-nav="projects">Projects</a>
                     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme">
                         <i class="fas fa-sun theme-icon-light"></i>
                         <i class="fas fa-moon theme-icon-dark"></i>
@@ -170,6 +171,9 @@
             } else if (currentPath.includes('/blogs') || currentPath.startsWith('/blogs')) {
                 const blogsLink = document.querySelector('[data-nav="blogs"]');
                 if (blogsLink) blogsLink.classList.add('active');
+            } else if (currentPath.includes('/projects') || currentPath.startsWith('/projects')) {
+                const projectsLink = document.querySelector('[data-nav="projects"]');
+                if (projectsLink) projectsLink.classList.add('active');
             }
         }
 
@@ -195,12 +199,51 @@
         // Update active navigation when navigating (for SPA-like behavior)
         window.addEventListener('popstate', setActiveNavigation);
 
-        // Also update on page visibility change (helps with back/forward navigation)
+        // Update on page visibility change (helps with back/forward navigation)
         document.addEventListener('visibilitychange', function () {
             if (!document.hidden) {
                 setTimeout(setActiveNavigation, 100);
             }
         });
+    </script>
+
+    <!-- Mermaid.js for diagrams -->
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default',
+            securityLevel: 'loose',
+        });
+
+        // Function to transform code blocks to mermaid divs
+        function initMermaid() {
+            const codeBlocks = document.querySelectorAll('pre > code.language-mermaid');
+            codeBlocks.forEach(codeBlock => {
+                const pre = codeBlock.parentElement;
+                const div = document.createElement('div');
+                div.className = 'mermaid';
+                div.textContent = codeBlock.textContent;
+                pre.replaceWith(div);
+            });
+            mermaid.run();
+        }
+
+        // Run on initial load
+        document.addEventListener('DOMContentLoaded', initMermaid);
+
+        // Re-initialize mermaid when theme changes
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.attributeName === 'data-theme') {
+                    const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default';
+                    mermaid.initialize({ theme: newTheme });
+                    // We might need to re-render, but usually mermaid handles theme changes better if re-initialized
+                    // or diagrams are re-processed. For simplicity, we'll start with this.
+                }
+            });
+        });
+        observer.observe(document.documentElement, { attributes: true });
     </script>
 </body>
 
