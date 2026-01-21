@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<div class="main-content">
+    <article class="post-container">
+        <header class="post-header">
+            <a href="{{ '/blogs/' | relative_url }}" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Blogs
+            </a>
+
+            <div class="post-meta-extra">
+                <span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span>
+                {% if page.categories %}
+                <span class="post-categories">
+                    {% for category in page.categories %}
+                    <span class="category-tag">{{ category }}</span>
+                    {% endfor %}
+                </span>
+                {% endif %}
+            </div>
+
+            <h1 class="post-title">{{ page.title }}</h1>
+
+            {% if page.description %}
+            <p class="post-description">{{ page.description }}</p>
+            {% endif %}
+        </header>
+
+        <div class="post-content">
+            {{ content }}
+        </div>
+
+        <footer class="post-footer">
+            <div class="sharing-center">
+                <h3>Share this post</h3>
+                <div class="share-buttons">
+                    <button id="copy-link" class="share-btn link" title="Copy link to clipboard">
+                        <i class="fas fa-link"></i>
+                    </button>
+                </div>
+                <script>
+                    document.getElementById('copy-link').addEventListener('click', function () {
+                        const url = window.location.href;
+                        navigator.clipboard.writeText(url).then(() => {
+                            const icon = this.querySelector('i');
+                            icon.className = 'fas fa-check';
+                            setTimeout(() => {
+                                icon.className = 'fas fa-link';
+                            }, 2000);
+                        });
+                    });
+                </script>
+            </div>
+        </footer>
+    </article>
+</div>
