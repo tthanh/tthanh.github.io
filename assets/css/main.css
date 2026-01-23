@@ -126,6 +126,15 @@
 
 
 
+/* Gradient Icon Utility */
+.gradient-icon {
+    background: linear-gradient(to bottom, var(--primary-color), var(--accent-vibrant));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
 /* Fluent 2 Light Theme */
 html[data-theme="light"] {
     /* Surface Colors */
