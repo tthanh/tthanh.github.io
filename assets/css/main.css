@@ -1,5 +1,4 @@
----
----
+--- ---
 
 /* Fluent 2 Design System Variables */
 :root {
@@ -898,6 +897,7 @@ html[data-theme="dark"] .site-header.scrolled .nav-link.active {
     display: flex;
     flex-direction: column;
     position: relative;
+    cursor: pointer;
 }
 
 .project-card:hover {
@@ -976,6 +976,7 @@ html[data-theme="dark"] .site-header.scrolled .nav-link.active {
     font-size: var(--font-size-body-large);
     line-height: var(--line-height-body-large);
     color: var(--text-secondary);
+    margin-top: var(--spacing-xxl);
     margin-bottom: var(--spacing-xxxxl);
     text-align: center;
 }
