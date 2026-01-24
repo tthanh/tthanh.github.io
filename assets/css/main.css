@@ -1,5 +1,4 @@
----
----
+--- ---
 
 /* Fluent 2 Design System Variables */
 :root {
@@ -958,7 +957,7 @@ html[data-theme="dark"] .site-header.scrolled .nav-link.active {
 
 .project-card p {
     color: var(--text-secondary);
-    font-size: var(--font-size-body);
+    font-size: 0.9rem;
     line-height: var(--line-height-body);
     margin-bottom: var(--spacing-l);
     flex-grow: 1;
@@ -1000,7 +999,7 @@ html[data-theme="dark"] .site-header.scrolled .nav-link.active {
 
 /* Fluent 2 Blog Styles */
 .intro-text {
-    font-size: 1.25rem;
+    font-size: 0.95rem;
     line-height: 1.6;
     color: var(--text-secondary);
     margin-top: var(--spacing-l);
@@ -1074,7 +1073,7 @@ html[data-theme="dark"] .site-header.scrolled .nav-link.active {
 
 .blog-card h2 {
     margin-bottom: var(--spacing-m);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     line-height: 1.3;
     font-weight: 800;
     letter-spacing: -0.02em;
@@ -1093,7 +1092,7 @@ html[data-theme="dark"] .site-header.scrolled .nav-link.active {
 
 .blog-card p {
     color: var(--text-secondary);
-    font-size: var(--font-size-body);
+    font-size: 0.9rem;
     line-height: var(--line-height-body);
     margin-bottom: var(--spacing-l);
 }
