@@ -1,4 +1,5 @@
---- ---
+---
+---
 
 /* Fluent 2 Design System Variables */
 :root {
@@ -1319,9 +1320,12 @@ html[data-theme="dark"] .site-header.scrolled .nav-link.active {
         line-height: var(--line-height-title);
     }
 
+    .site-nav .container {
+        justify-content: center;
+    }
+
     .site-title {
-        font-size: var(--font-size-body-large);
-        line-height: var(--line-height-body-large);
+        display: none;
     }
 
     .skill-category,
